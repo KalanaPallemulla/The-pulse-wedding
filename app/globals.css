@@ -1,3 +1,131 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "mulish-black"; /* Choose a name for your font */
+  src: url("../fonts/Mulish-Black.ttf") format("truetype"); /* Adjust the path to your font file */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish-blackItalic";
+  src: url("../fonts/Mulish-BlackItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish-bold";
+  src: url("../fonts/Mulish-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish-boldItalic";
+  src: url("../fonts/Mulish-BoldItalic.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "mulish-extraBold";
+  src: url("../fonts/Mulish-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish-extraBoldItalic";
+  src: url("../fonts/Mulish-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish-lightItalic";
+  src: url("../fonts/Mulish-LightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish-medium";
+  src: url("../fonts/Mulish-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish-mediumItalic";
+  src: url("../fonts/Mulish-MediumItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish-regular";
+  src: url("../fonts/Mulish-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish-semiBold";
+  src: url("../fonts/Mulish-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mulish-semiBoldItalic";
+  src: url("../fonts/Mulish-SemiBoldItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  body {
+    /* overflow: hidden; */
+  }
+}
+
+/* Enable scrolling on screens larger than 768px (typical laptop/desktop screens) */
+@media (min-width: 769px) {
+  body {
+    overflow: auto; /* or overflow: scroll; to allow scrolling when needed */
+  }
+}
+.mulish-black {
+  font-family: "mulish-black", sans-serif;
+}
+.mulish-blackItalic {
+  font-family: "mulish-blackItalic", sans-serif;
+}
+.mulish-bold {
+  font-family: "mulish-bold", sans-serif;
+}
+.mulish-boldItalic {
+  font-family: "mulish-boldItalic", sans-serif;
+}
+.mulish-extraBold {
+  font-family: "mulish-extraBold", sans-serif;
+}
+.mulish-extraBoldItalic {
+  font-family: "mulish-extraBoldItalic", sans-serif;
+}
+.mulish-lightItalic {
+  font-family: "mulish-lightItalic", sans-serif;
+}
+.mulish-medium {
+  font-family: "mulish-medium", sans-serif;
+}
+.mulish-mediumItalic {
+  font-family: "mulish-mediumItalic", sans-serif;
+}
+.mulish-regular {
+  font-family: "mulish-regular", sans-serif;
+}
+.mulish-semiBold {
+  font-family: "mulish-semiBold", sans-serif;
+}
+.mulish-semiBoldItalic {
+  font-family: "mulish-semiBoldItalic", sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #08b2c3, #2fdcb2, #2fdcb2);
+  background-clip: text; /* Apply the gradient to the text only */
+  color: transparent; /* Make the text transparent to show the gradient background */
+  display: inline-block; /* Ensures the gradient respects the text size */
+}
