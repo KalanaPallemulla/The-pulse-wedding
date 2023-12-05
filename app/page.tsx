@@ -102,7 +102,7 @@ export default function Home() {
           life filled with photos to reflect that
         </h1>
         <div className="md:grid md:grid-cols-3">
-          <div className=" bg-white rounded-lg shadow-md mx-1 flex flex-col md:mt-20  mt-10  text-center items-center md:mx-5 ">
+          <div className=" bg-white rounded-lg rounded-t-xl shadow-md mx-1 flex flex-col md:mt-20  mt-10  text-center items-center md:mx-5 ">
             <img className="w-full" src="assests/weddings.png" alt="My Image" />
             <h1 className="font-mulish-extraBold text-fonts-light_black text-2xl md:mt-5">
               WEDDINGS
