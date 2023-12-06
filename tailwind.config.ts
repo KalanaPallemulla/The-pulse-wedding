@@ -1,24 +1,24 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       screens: {
-        'sm': '640px',     // Small screens, mobile phones
-        'md': '768px',     // Medium screens, tablets
-        'lg': '1024px',    // Large screens, small desktops
-        'xl': '1280px',    // Extra large screens, desktops
-        '2xl': '1536px',   // Extra extra large screens, large desktops
+        sm: "640px", // Small screens, mobile phones
+        md: "768px", // Medium screens, tablets
+        lg: "1024px", // Large screens, small desktops
+        xl: "1280px", // Extra large screens, desktops
+        "2xl": "1536px",
       },
 
       fontFamily: {
@@ -46,7 +46,7 @@ const config: Config = {
           red: "#991b1b",
           dark_green: "#025D7A",
           white_blue: "#EEFEFF",
-          button_white: "#F3F3F3"
+          button_white: "#F3F3F3",
         },
         fonts: {
           dark_green: "#025D7A",
@@ -62,7 +62,7 @@ const config: Config = {
           ligt_green_3: "#007F88",
           light_gray_2: "#8A8787",
           dark_gray_2: "#3C3D3E",
-          light_black:"#3A3939"
+          light_black: "#3A3939",
         },
         border: {
           line_green: "#00A4AD",
@@ -72,5 +72,5 @@ const config: Config = {
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

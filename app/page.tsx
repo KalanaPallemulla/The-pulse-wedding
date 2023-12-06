@@ -59,20 +59,20 @@ export default function Home() {
           experience with an amazing crew. Capturing the perfect poise or smile
           can only be done by having a smile
         </h1>
-        <div className="md:grid md:grid-cols-2 md:mt-11">
+        <div className="md:grid md:grid-cols-2 2xl:grid-cols-3 md:mt-11">
           <img
-            className="bg-blend-screen block md:pl-4 px-2 "
+            className="bg-blend-screen block md:pl-4 px-2 2xl:col-span-1"
             src="assests/aboutUsImage.png"
             alt="My Image"
           />
-          <div className="">
-            <h1 className="font-mulish-black text-fonts-light_black text-4xl">
+          <div className="2xl:col-span-2 ">
+            <h1 className="font-mulish-black text-fonts-light_black text-4xl 2xl:text-5xl">
               THE
             </h1>
-            <span className="font-mulish-black text-fonts-light_black text-4xl">
+            <span className="font-mulish-black text-fonts-light_black text-4xl 2xl:text-5xl">
               PULSE WEDDINGS
             </span>
-            <h1 className="font-mulish-regular text-fonts-light_gray_2 md:mt-4 md:text-[17px] text-justify">
+            <h1 className="font-mulish-regular text-fonts-light_gray_2 md:mt-4 md:text-[17px] text-justify 2xl:text-[24px]">
               As a group of enthusiastic photographers, we at The Pulse Weddings
               feel blessed to have the opportunity to pursue our love as a
               career. We are mesmerised by elegant brides, soft lighting,
