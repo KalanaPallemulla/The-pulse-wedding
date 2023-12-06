@@ -13,6 +13,14 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      screens: {
+        'sm': '640px',     // Small screens, mobile phones
+        'md': '768px',     // Medium screens, tablets
+        'lg': '1024px',    // Large screens, small desktops
+        'xl': '1280px',    // Extra large screens, desktops
+        '2xl': '1536px',   // Extra extra large screens, large desktops
+      },
+
       fontFamily: {
         "mulish-black": ["mulish-black", "sans"],
         "mulish-blackItalic": ["mulish-blackItalic", "sans"],
