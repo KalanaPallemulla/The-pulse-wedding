@@ -160,25 +160,25 @@ export default function Home() {
                 className="w-60 top-0 right-0 h-screen fixed bg-global-white p-8"
               >
                 <h1
-                  onClick={() => handleNavLinkClick("home-section")}
+                  onClickCapture={() => handleNavLinkClick("home-section")}
                   className="font-mulish-extraBold text-fonts-light_gray_2  cursor-pointer text-xs "
                 >
                   HOME
                 </h1>
                 <h1
-                  onClick={() => handleNavLinkClick("about-section")}
+                  onClickCapture={() => handleNavLinkClick("about-section")}
                   className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
                 >
                   ABOUT US
                 </h1>
                 <h1
-                  onClick={() => handleNavLinkClick("service-section")}
+                  onClickCapture={() => handleNavLinkClick("service-section")}
                   className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
                 >
                   SERVICES
                 </h1>
                 <h1
-                  onClick={() => handleNavLinkClick("work-section")}
+                  onClickCapture={() => handleNavLinkClick("work-section")}
                   className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
                 >
                   OUR WORK
