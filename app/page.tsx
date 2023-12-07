@@ -184,7 +184,7 @@ export default function Home() {
                   OUR WORK
                 </h1>
                 <h1
-                  onClick={() => handleNavLinkClick("contact-section")}
+                  onClickCapture={() => handleNavLinkClick("contact-section")}
                   className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
                 >
                   CONTACT
@@ -230,13 +230,13 @@ export default function Home() {
           </div>
           <div className=" grid grid-cols-2 ">
             <img
-              className="bg-blend-screen block 2xl:w-full 2xl:h-full h-full pr-1"
+              className="bg-blend-screen 2xl:w-full 2xl:h-full h-full pr-1"
               src="assests/homeImage1.png"
               alt="My Image"
             />
 
             <img
-              className="bg-blend-screen block 2xl:w-full 2xl:h-full h-full pl-1"
+              className="bg-blend-screen 2xl:w-full 2xl:h-full h-full pl-1"
               src="assests/homeImage4.png"
               alt="My Image"
             />
