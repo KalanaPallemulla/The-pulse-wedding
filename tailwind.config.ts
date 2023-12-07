@@ -68,6 +68,7 @@ const config: Config = {
           line_green: "#00A4AD",
           line_dark_green: "#025D7A",
         },
+        
       },
     },
   },
