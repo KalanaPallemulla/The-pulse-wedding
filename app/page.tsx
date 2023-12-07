@@ -117,7 +117,11 @@ export default function Home() {
         <div className="block md:hidden ">
           <div className="flex justify-between px-7  items-center">
             <div className="py-2 h-[50px] w-[120px]">
-              <img src="assests/logo.png" alt="My Image" />
+              <img
+                src="assests/logo.png"
+                alt="My Image"
+                onClick={() => handleNavLinkClick("home-section")}
+              />
             </div>
             <div className="h-[30px] w-[30px] p-1">
               <img
@@ -178,7 +182,8 @@ export default function Home() {
         </div>
       </nav>
       <div className="md:px-14 md:mt-4 2xl:mt-8 mt-2">
-        <div id="home-section" className="hidden md:block">
+        <div id="home-section"></div>
+        <div className="hidden md:block">
           <div className=" md:grid md:grid-cols-2 ">
             <div className="flex flex-col justify-center items-center md:items-start md:pl-4">
               <img
@@ -231,10 +236,8 @@ export default function Home() {
             experience with an amazing crew. Capturing the perfect poise or
             smile can only be done by having a smile
           </h1>
-          <div
-            id="about-section"
-            className="md:grid md:grid-cols-3 2xl:grid-cols-3 md:mt-11 2xl:mt-20 mt-6"
-          >
+          <div id="about-section"></div>
+          <div className="md:grid md:grid-cols-3 2xl:grid-cols-3 md:mt-11 2xl:mt-20 mt-6">
             <img
               className="bg-blend-screen block md:pl-4 md:col-span-1 2xl:col-span-1 2xl:ml-6 sm:px-2 px-12"
               src="assests/aboutUsImage.png"
@@ -276,19 +279,20 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div id="service-section">
-            <h1 className="font-mulish-black text-fonts-light_black md:text-4xl 2xl:text-5xl text-xl text-center md:mt-14 2xl:mt-20 mt-[22px] ">
-              WHAT WE OFFER
-            </h1>
-            <h1 className="md:mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px] mt-4">
-              With 5 years of experience in capturing celebrations all around
-              the island,{" "}
-            </h1>
-            <h1 className="font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
-              our team is here to make sure you have the best day of your life
-              filled with photos to reflect that
-            </h1>
-          </div>
+          <div id="service-section"></div>
+
+          <h1 className="font-mulish-black text-fonts-light_black md:text-4xl 2xl:text-5xl text-xl text-center md:mt-14 2xl:mt-20 mt-[22px] ">
+            WHAT WE OFFER
+          </h1>
+          <h1 className="md:mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px] mt-4">
+            With 5 years of experience in capturing celebrations all around the
+            island,{" "}
+          </h1>
+          <h1 className="font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
+            our team is here to make sure you have the best day of your life
+            filled with photos to reflect that
+          </h1>
+
           <div className="md:grid md:grid-cols-3">
             <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
               <img
@@ -411,87 +415,85 @@ export default function Home() {
               </Link>
             </div> */}
           </div>
-          <div id="work-section">
-            <h1 className="font-mulish-black text-fonts-light_black md:text-4xl text-xl text-center md:mt-14 mt-9">
-              OUR AMAZING WORK
-            </h1>
-            <h1 className="md:mt-4 mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
-              We aim to capture the essence of your relationship, including the
-              way your faces and hands join together. We want to capture the
-              joyous moments, the heartfelt laughs, and everything in between
-            </h1>
-            <div className="md:grid md:grid-cols-2 md:mt-8 hidden">
-              <div className="md:grid md:grid-cols-2 ">
-                <div className="md:grid md:grid-row-3">
-                  <div className="md:grid md:grid-row-2 md:pl-3">
-                    <img
-                      className="bg-blend-screen block lg:w-full"
-                      src="assests/ourWorks/im1.png"
-                      alt="My Image"
-                    />
-                  </div>
+          <div id="work-section"></div>
 
-                  <img
-                    className="bg-blend-screen block md:pl-3 lg:w-full md:h-full"
-                    src="assests/ourWorks/im2.png"
-                    alt="My Image"
-                  />
-                </div>
-                <div className="md:grid md:grid-row-3 md:pl-3 ">
+          <h1 className="font-mulish-black text-fonts-light_black md:text-4xl text-xl text-center md:mt-14 mt-9">
+            OUR AMAZING WORK
+          </h1>
+          <h1 className="md:mt-4 mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
+            We aim to capture the essence of your relationship, including the
+            way your faces and hands join together. We want to capture the
+            joyous moments, the heartfelt laughs, and everything in between
+          </h1>
+          <div className="md:grid md:grid-cols-2 md:mt-8 hidden">
+            <div className="md:grid md:grid-cols-2 ">
+              <div className="md:grid md:grid-row-3">
+                <div className="md:grid md:grid-row-2 md:pl-3">
                   <img
                     className="bg-blend-screen block lg:w-full"
-                    src="assests/ourWorks/im3.png"
+                    src="assests/ourWorks/im1.png"
                     alt="My Image"
                   />
-                  <img
-                    className="bg-blend-screen block md:mt-5 lg:w-full"
-                    src="assests/ourWorks/im4.png"
-                    alt="My Image"
-                  />
+                </div>
 
-                  <img
-                    className="bg-blend-screen block md:mt-5 lg:w-full "
-                    src="assests/ourWorks/im5.png"
-                    alt="My Image"
-                  />
-                </div>
-              </div>
-              <div className="md:grid md:grid-cols-2">
-                <div className="md:grid md:grid-row-3 ">
-                  <img
-                    className="bg-blend-screen block md:pl-3 lg:w-full "
-                    src="assests/ourWorks/im6.png"
-                    alt="My Image"
-                  />
-                  <div className="md:grid md:grid-row-2 md:pl-3">
-                    <img
-                      className="bg-blend-screen block lg:w-full md:h-full"
-                      src="assests/ourWorks/im7.png"
-                      alt="My Image"
-                    />
-                  </div>
-                </div>
                 <img
-                  className="bg-blend-screen block md:pl-3 h-full lg:w-full"
-                  src="assests/ourWorks/im8.png"
+                  className="bg-blend-screen block md:pl-3 lg:w-full md:h-full"
+                  src="assests/ourWorks/im2.png"
+                  alt="My Image"
+                />
+              </div>
+              <div className="md:grid md:grid-row-3 md:pl-3 ">
+                <img
+                  className="bg-blend-screen block lg:w-full"
+                  src="assests/ourWorks/im3.png"
+                  alt="My Image"
+                />
+                <img
+                  className="bg-blend-screen block md:mt-5 lg:w-full"
+                  src="assests/ourWorks/im4.png"
+                  alt="My Image"
+                />
+
+                <img
+                  className="bg-blend-screen block md:mt-5 lg:w-full "
+                  src="assests/ourWorks/im5.png"
                   alt="My Image"
                 />
               </div>
             </div>
-            <div className="block md:hidden mt-5">
+            <div className="md:grid md:grid-cols-2">
+              <div className="md:grid md:grid-row-3 ">
+                <img
+                  className="bg-blend-screen block md:pl-3 lg:w-full "
+                  src="assests/ourWorks/im6.png"
+                  alt="My Image"
+                />
+                <div className="md:grid md:grid-row-2 md:pl-3">
+                  <img
+                    className="bg-blend-screen block lg:w-full md:h-full"
+                    src="assests/ourWorks/im7.png"
+                    alt="My Image"
+                  />
+                </div>
+              </div>
               <img
-                className="bg-blend-screen block h-full"
-                src="assests/amazing.png"
+                className="bg-blend-screen block md:pl-3 h-full lg:w-full"
+                src="assests/ourWorks/im8.png"
                 alt="My Image"
               />
             </div>
           </div>
+          <div className="block md:hidden mt-5">
+            <img
+              className="bg-blend-screen block h-full"
+              src="assests/amazing.png"
+              alt="My Image"
+            />
+          </div>
         </div>
       </div>
-      <div
-        id="contact-section"
-        className="hidden md:block bg-blend-screen w-full relative md:mt-10 mt-9"
-      >
+      <div id="contact-section"></div>
+      <div className="hidden md:block bg-blend-screen w-full relative md:mt-10 mt-9">
         <img
           className="w-full"
           src="assests/contactUsImage.png"
