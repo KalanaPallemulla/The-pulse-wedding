@@ -205,15 +205,14 @@ export default function Home() {
                 alt="My Image"
               />
             </div>
-            <div className="md:grid md:grid-flow-row-2 md:px-4">
+            <div className="md:grid md:grid-row-2 md:px-4">
               <img
-                className="bg-blend-screen block 2xl:w-full 2xl:h-full md:h-full"
+                className="2xl:w-full 2xl:h-full "
                 src="assests/homeImage2.png"
                 alt="My Image"
               />
-
               <img
-                className="bg-blend-screen block 2xl:w-full 2xl:h-full md:h-full "
+                className="2xl:w-full 2xl:h-full "
                 src="assests/homeImage3.png"
                 alt="My Image"
               />
