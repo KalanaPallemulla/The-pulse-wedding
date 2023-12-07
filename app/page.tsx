@@ -133,14 +133,14 @@ export default function Home() {
               <img
                 src="assests/logo.png"
                 alt="My Image"
-                onClick={() => handleNavLinkClick("home-section")}
+                onClickCapture={() => handleNavLinkClick("home-section")}
               />
             </div>
             <div className="h-[30px] w-[30px] p-1">
               <img
                 src="assests/hamburger.png"
                 alt="My Image"
-                onClick={toggle}
+                onClickCapture={toggle}
               />
             </div>
           </div>
@@ -160,31 +160,31 @@ export default function Home() {
                 className="w-60 top-0 right-0 h-screen fixed bg-global-white p-8"
               >
                 <h1
-                  onClick={() => handleNavLinkClick("home-section")}
+                  onClickCapture={() => handleNavLinkClick("home-section")}
                   className="font-mulish-extraBold text-fonts-light_gray_2  cursor-pointer text-xs "
                 >
                   HOME
                 </h1>
                 <h1
-                  onClick={() => handleNavLinkClick("about-section")}
+                  onClickCapture={() => handleNavLinkClick("about-section")}
                   className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
                 >
                   ABOUT US
                 </h1>
                 <h1
-                  onClick={() => handleNavLinkClick("service-section")}
+                  onClickCapture={() => handleNavLinkClick("service-section")}
                   className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
                 >
                   SERVICES
                 </h1>
                 <h1
-                  onClick={() => handleNavLinkClick("work-section")}
+                  onClickCapture={() => handleNavLinkClick("work-section")}
                   className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
                 >
                   OUR WORK
                 </h1>
                 <h1
-                  onClick={() => handleNavLinkClick("contact-section")}
+                  onClickCapture={() => handleNavLinkClick("contact-section")}
                   className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
                 >
                   CONTACT
@@ -271,24 +271,37 @@ export default function Home() {
                 </h1>
               </div>
               <h1 className="font-mulish-regular text-fonts-light_gray_2 md:mt-4 text-justify md:text-xs 2xl:text-xl text-xs mt-[6px]">
-                As a group of enthusiastic photographers, we at The Pulse
-                Weddings feel blessed to have the opportunity to pursue our love
-                as a career. We are mesmerised by elegant brides, soft lighting,
-                natural settings and bubbly personalities of the bride and
-                groom. We are the expert artisans who turn the beating heart of
-                your wedding day into visual timepieces. Hearing your stories
-                and vision about your special day is important to us and there
-                is no such thing as too many details. Capturing the perfect
-                poise or smile can only be done by having a professional
-                photographer, therefore we ensure all our staff are properly
-                trained and dispatched to photographic assignments fully
-                equipped with the latest cameras, thereby ensuring we capture
-                and immortalise your precious memories on photographs by using
-                young, idiosyncratic and professional wedding photographers,
-                bonded by talent, driven by passion to carry you apart from your
-                manifestation. We are imaginative, energetic, and curious. We
-                strive for quality in all we do, which has led us to where we
-                are now.
+                As a tightly-knit group of passionate photographers, we, at The
+                Pulse Weddings, consider ourselves truly fortunate to transform
+                our love for photography into a fulfilling career. Our
+                fascination lies in the enchanting world of elegant brides, soft
+                lighting, natural backdrops, and the vibrant personalities of
+                couples on their special day. We take pride in being skilled
+                artisans, adept at turning the heartbeat of your wedding into
+                timeless visual masterpieces. Your stories and unique vision for
+                your special day are not just details to us; they are the
+                building blocks of our creative process. We believe in the power
+                of understanding the nuances of your narrative, leaving no room
+                for too many details. We cherish the opportunity to capture the
+                perfect poise, the genuine smiles, and the heartfelt moments
+                that make your wedding day extraordinary. We recognize that
+                achieving this requires the expertise of a professional
+                photographer, and thus, we prioritize the training of our staff.
+                Every member is dispatched to photographic assignments fully
+                equipped with the latest cameras and technology, ensuring that
+                we freeze-frame and immortalize your cherished memories through
+                the lens of our skilled, young, and professional wedding
+                photographers. Imagination, energy, and curiosity drive our
+                every endeavor. We constantly strive for excellence in all
+                aspects of our work, The Pulse Weddings is more than a
+                photography service; we are a dedicated team committed to
+                turning your wedding day into a visual masterpiece. Through our
+                imaginative approach, boundless energy, and insatiable
+                curiosity, we strive for nothing short of excellence in every
+                photograph we capture. Our journey is fueled by a deep passion
+                for storytelling, and we are honored to be part of your special
+                day, preserving the magic and emotion in photographs that will
+                last a lifetime.
               </h1>
             </div>
           </div>
@@ -298,12 +311,11 @@ export default function Home() {
             WHAT WE OFFER
           </h1>
           <h1 className="md:mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px] mt-4">
-            With 5 years of experience in capturing celebrations all around the
-            island,{" "}
-          </h1>
-          <h1 className="font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
-            our team is here to make sure you have the best day of your life
-            filled with photos to reflect that
+            Drawing from 5 years of experience capturing celebrations across the
+            island, our dedicated team is committed to making your special day
+            the best it can be. We ensure your joy-filled moments are preserved
+            in photos, reflecting the beauty and happiness of your unique
+            celebration.
           </h1>
 
           <div className="md:grid md:grid-cols-3">
