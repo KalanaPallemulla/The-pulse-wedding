@@ -57,6 +57,19 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    // Access the document object only on the client side
+    const slider = document.getElementById("out_slider");
+    slider?.addEventListener("click", () => {
+      setIsOpen(false);
+      // Additional logic to handle the change
+    });
+
+    const innerSlider = document.getElementById("inner_slider");
+    innerSlider?.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  }, []);
   const handleNavLinkClick = (id: string) => {
     const targetElement = document.getElementById(id);
 
