@@ -1,295 +1,467 @@
+"use client";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
+  const navRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState<Boolean>(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const nav = navRef.current;
+
+      if (nav) {
+        if (scrollTop > nav.offsetTop) {
+          nav.classList.add("fixed", "top-0", "z-50");
+        } else {
+          nav.classList.remove("fixed", "top-0", "z-50");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <main>
-      <nav className="top-0 w-full">
+      <nav ref={navRef} className="top-0 w-full bg-black shadow-md ">
         <div className="hidden md:block">
-          <div className="flex justify-between md:px-14  ">
-            <div className=" ">
+          <div className="flex justify-between 2xl:px-25 md:px-14 px-4 2xl:py-3 md:py-2 py-2">
+            <div className="2xl:h-[50px] 2xl:w-[200px] md:h-[40px] md:w-[150px] ">
               <img src="assests/logo.png" alt="My Image" />
             </div>
             <div className="w-full flex items-center justify-end gap-x-10">
-              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-base">
+              <h1 className="font-mulish-extraBold text-background_custom-button_white cursor-pointer md:text-sm 2xl:text-xl text-[6px]">
                 HOME
               </h1>
-              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-base">
+              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]">
                 ABOUT US
               </h1>
-              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-base">
+              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]">
                 SERVICES
               </h1>
-              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-base">
+              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]">
                 OUR WORK
               </h1>
-              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-base">
+              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]">
                 CONTACT
               </h1>
             </div>
           </div>
         </div>
-      </nav>
-      <div className="md:px-14 px-7">
-        <div className="md:grid md:grid-cols-2">
-          <div className="flex flex-col justify-center items-center md:items-start md:pl-4">
-            <img
-              className="bg-blend-screen block lg:w-full"
-              src="assests/homeImage1.png"
-              alt="My Image"
-            />
+        <div className="block md:hidden ">
+          <div className="flex justify-between px-7  items-center">
+            <div className="py-2 h-[50px] w-[120px]">
+              <img src="assests/logo.png" alt="My Image" />
+            </div>
+            <div className="h-[30px] w-[30px] p-1">
+              <img
+                src="assests/hamburger.png"
+                alt="My Image"
+                onClick={toggle}
+              />
+            </div>
           </div>
-          <div className="md:grid md:grid-flow-row-2 md:px-4">
+        </div>
+      </nav>
+      <div className="md:px-14 md:mt-4 2xl:mt-8 mt-2">
+        <div className="hidden md:block">
+          <div className=" md:grid md:grid-cols-2 ">
+            <div className="flex flex-col justify-center items-center md:items-start md:pl-4">
+              <img
+                className="bg-blend-screen block 2xl:w-full 2xl:h-full md:h-full"
+                src="assests/homeImage1.png"
+                alt="My Image"
+              />
+            </div>
+            <div className="md:grid md:grid-flow-row-2 md:px-4">
+              <img
+                className="bg-blend-screen block 2xl:w-full 2xl:h-full md:h-full"
+                src="assests/homeImage2.png"
+                alt="My Image"
+              />
+
+              <img
+                className="bg-blend-screen block 2xl:w-full 2xl:h-full md:h-full "
+                src="assests/homeImage3.png"
+                alt="My Image"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="block md:hidden w-full">
+          <div className="flex flex-col justify-center items-center md:items-start">
             <img
-              className="bg-blend-screen block lg:w-full "
+              className="bg-blend-screen block 2xl:w-full 2xl:h-full md:h-full"
               src="assests/homeImage2.png"
               alt="My Image"
             />
+          </div>
+          <div className=" grid grid-cols-2 ">
+            <img
+              className="bg-blend-screen block 2xl:w-full 2xl:h-full h-full pr-1"
+              src="assests/homeImage1.png"
+              alt="My Image"
+            />
 
             <img
-              className="bg-blend-screen block lg:w-full md:mt-2"
-              src="assests/homeImage3.png"
+              className="bg-blend-screen block 2xl:w-full 2xl:h-full h-full pl-1"
+              src="assests/homeImage4.png"
               alt="My Image"
             />
           </div>
         </div>
-        <h1 className="font-mulish-boldItalic text-fonts-light_gray_2 text-sm md:mt-7 text-center uppercase">
-          We at Pulse Weddings look forward to making your special day a truly
-          special one. We guarantee you a worry-free, carefree and fun
-          experience with an amazing crew. Capturing the perfect poise or smile
-          can only be done by having a smile
-        </h1>
-        <div className="md:grid md:grid-cols-2 2xl:grid-cols-3 md:mt-11">
-          <img
-            className="bg-blend-screen block md:pl-4 px-2 2xl:col-span-1"
-            src="assests/aboutUsImage.png"
-            alt="My Image"
-          />
-          <div className="2xl:col-span-2 ">
-            <h1 className="font-mulish-black text-fonts-light_black text-4xl 2xl:text-5xl">
-              THE
-            </h1>
-            <span className="font-mulish-black text-fonts-light_black text-4xl 2xl:text-5xl">
-              PULSE WEDDINGS
-            </span>
-            <h1 className="font-mulish-regular text-fonts-light_gray_2 md:mt-4 md:text-[17px] text-justify 2xl:text-[24px]">
-              As a group of enthusiastic photographers, we at The Pulse Weddings
-              feel blessed to have the opportunity to pursue our love as a
-              career. We are mesmerised by elegant brides, soft lighting,
-              natural settings and bubbly personalities of the bride and groom.
-              We are the expert artisans who turn the beating heart of your
-              wedding day into visual timepieces. Hearing your stories and
-              vision about your special day is important to us and there is no
-              such thing as too many details. Capturing the perfect poise or
-              smile can only be done by having a professional photographer,
-              therefore we ensure all our staff are properly trained and
-              dispatched to photographic assignments fully equipped with the
-              latest cameras, thereby ensuring we capture and immortalise your
-              precious memories on photographs by using young, idiosyncratic and
-              professional wedding photographers, bonded by talent, driven by
-              passion to carry you apart from your manifestation. We are
-              imaginative, energetic, and curious. We strive for quality in all
-              we do, which has led us to where we are now.
-            </h1>
-          </div>
-        </div>
-        <h1 className="font-mulish-black text-fonts-light_black text-4xl text-center md:mt-14">
-          WHAT WE OFFER
-        </h1>
-        <h1 className="md:mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-sm text-center uppercase">
-          With 5 years of experience in capturing celebrations all around the
-          island, our team is here to make sure you have the best day of your
-          life filled with photos to reflect that
-        </h1>
-        <div className="md:grid md:grid-cols-3">
-          <div className="bg-white rounded-xl shadow-md mx-1 flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 ">
+        <div className="px-5">
+          <h1 className="font-mulish-boldItalic text-fonts-light_gray_2 md:mt-7 mt-8 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
+            We at Pulse Weddings look forward to making your special day a truly
+            special one. We guarantee you a worry-free, carefree and fun
+            experience with an amazing crew. Capturing the perfect poise or
+            smile can only be done by having a smile
+          </h1>
+          <div className="md:grid md:grid-cols-3 2xl:grid-cols-3 md:mt-11 2xl:mt-20 mt-6">
             <img
-              className="w-full rounded-t-xl"
-              src="assests/weddings.png"
+              className="bg-blend-screen block md:pl-4 md:col-span-1 2xl:col-span-1 2xl:ml-6 sm:px-2 px-12"
+              src="assests/aboutUsImage.png"
               alt="My Image"
             />
-            <h1 className="font-mulish-extraBold text-fonts-light_black text-2xl md:mt-5">
-              WEDDINGS
-            </h1>
-            <h1 className="font-mulish-semiBold text-fonts-light_gray text-sm uppercase md:px-6 md:mt-2">
-              Every love story is unique and should be described in its own
-              special way. We are happy to add something special to your day of
-              celebration
-            </h1>
-            <Link href="https://drive.google.com/drive/folders/1xeU9IuY1hPxP6WVfrqZnYbeJSWIBRrHg?usp=sharing">
-              <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] font-mulish-extraBold text-fonts-dark_gray">
-                VIEW PACKAGE DETAILS
-              </button>
-            </Link>
+            <div className="md:col-span-2 2xl:col-span-2 md:mt-0 mt-5 md:ml-4 2xl:ml-0">
+              <div className="hidden md:block">
+                <h1 className="font-mulish-black text-fonts-light_black md:text-4xl 2xl:text-5xl text-xl">
+                  THE
+                </h1>
+                <h1 className="font-mulish-black text-fonts-light_black md:text-4xl 2xl:text-5xl text-xl">
+                  PULSE WEDDINGS
+                </h1>
+              </div>
+              <div className="block md:hidden w-full text-center">
+                <h1 className="font-mulish-black text-fonts-light_black text-xl">
+                  THE PULSE WEDDINGS
+                </h1>
+              </div>
+              <h1 className="font-mulish-regular text-fonts-light_gray_2 md:mt-4 text-justify md:text-xs 2xl:text-xl text-xs mt-[6px]">
+                As a group of enthusiastic photographers, we at The Pulse
+                Weddings feel blessed to have the opportunity to pursue our love
+                as a career. We are mesmerised by elegant brides, soft lighting,
+                natural settings and bubbly personalities of the bride and
+                groom. We are the expert artisans who turn the beating heart of
+                your wedding day into visual timepieces. Hearing your stories
+                and vision about your special day is important to us and there
+                is no such thing as too many details. Capturing the perfect
+                poise or smile can only be done by having a professional
+                photographer, therefore we ensure all our staff are properly
+                trained and dispatched to photographic assignments fully
+                equipped with the latest cameras, thereby ensuring we capture
+                and immortalise your precious memories on photographs by using
+                young, idiosyncratic and professional wedding photographers,
+                bonded by talent, driven by passion to carry you apart from your
+                manifestation. We are imaginative, energetic, and curious. We
+                strive for quality in all we do, which has led us to where we
+                are now.
+              </h1>
+            </div>
           </div>
-          <div className=" bg-white rounded-xl shadow-md mx-1 flex flex-col md:md:mt-10  mt-5  text-center items-center md:mx-5 ">
-            <img
-              className="w-full rounded-t-xl"
-              src="assests/engagements.png"
-              alt="My Image"
-            />
-            <h1 className="font-mulish-extraBold text-fonts-light_black text-2xl md:mt-5">
-              ENGAGEMENTS
-            </h1>
-            <h1 className="font-mulish-semiBold text-fonts-light_gray text-sm uppercase md:px-6 md:mt-2">
-              A photoshoot is a wonderful way to remember the lovely time that
-              you both had during your engagement And Bringing joy and love to
-              life one frame at a time
-            </h1>
-            <Link href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link">
-              <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] font-mulish-extraBold text-fonts-dark_gray">
-                VIEW PACKAGE DETAILS
-              </button>
-            </Link>
+          <h1 className="font-mulish-black text-fonts-light_black md:text-4xl 2xl:text-5xl text-xl text-center md:mt-14 2xl:mt-20 mt-[22px] ">
+            WHAT WE OFFER
+          </h1>
+          <h1 className="md:mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px] mt-4">
+            With 5 years of experience in capturing celebrations all around the
+            island,{" "}
+          </h1>
+          <h1 className="font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
+            our team is here to make sure you have the best day of your life
+            filled with photos to reflect that
+          </h1>
+
+          <div className="md:grid md:grid-cols-3">
+            <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
+              <img
+                className="w-full rounded-t-xl"
+                src="assests/weddings.png"
+                alt="My Image"
+              />
+              <h1 className="font-mulish-extraBold text-fonts-light_black md:text-2xl text-base md:mt-5 mt-5 ">
+                WEDDINGS
+              </h1>
+              <h1 className="font-mulish-semiBold text-fonts-light_gray md:text-sm text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] ">
+                Every love story is unique and should be described in its own
+                special way. We are happy to add something special to your day
+                of celebration
+              </h1>
+              <Link
+                href="https://drive.google.com/drive/folders/1xeU9IuY1hPxP6WVfrqZnYbeJSWIBRrHg?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] w-[175px] h-[36px] font-mulish-extraBold text-fonts-dark_gray md:text-lg text-[9px] mt-6 mb-4">
+                  VIEW PACKAGE DETAILS
+                </button>
+              </Link>
+            </div>
+            <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
+              <img
+                className="w-full rounded-t-xl"
+                src="assests/engagements.png"
+                alt="My Image"
+              />
+              <h1 className="font-mulish-extraBold text-fonts-light_black md:text-2xl text-base md:mt-5 mt-5 ">
+                ENGAGEMENTS
+              </h1>
+              <h1 className="font-mulish-semiBold text-fonts-light_gray md:text-sm text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] ">
+                A photoshoot is a wonderful way to remember the lovely time that
+                you both had during your engagement And Bringing joy and love to
+                life one frame at a time
+              </h1>
+              <Link
+                href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] w-[175px] h-[36px] font-mulish-extraBold text-fonts-dark_gray md:text-lg text-[9px] mt-6 mb-4">
+                  VIEW PACKAGE DETAILS
+                </button>
+              </Link>
+            </div>
+            <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
+              <img
+                className="w-full rounded-t-xl"
+                src="assests/casualShoots.png"
+                alt="My Image"
+              />
+              <h1 className="font-mulish-extraBold text-fonts-light_black md:text-2xl text-base md:mt-5 mt-5 ">
+                CASUAL SHOOTS
+              </h1>
+              <h1 className="font-mulish-semiBold text-fonts-light_gray md:text-sm text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] ">
+                A excellent method to get over your worry and nervousness about
+                being in front of the camera on your wedding day is to do casual
+                shoots celebration
+              </h1>
+              <Link
+                href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] w-[175px] h-[36px] font-mulish-extraBold text-fonts-dark_gray md:text-lg text-[9px] mt-6 mb-4">
+                  VIEW PACKAGE DETAILS
+                </button>
+              </Link>
+            </div>
+            {/* <div className=" bg-white rounded-xl shadow-md mx-1 flex flex-col md:md:mt-10  mt-5  text-center items-center md:mx-5 ">
+              <img
+                className="w-full rounded-t-xl"
+                src="assests/engagements.png"
+                alt="My Image"
+              />
+              <h1 className="font-mulish-extraBold text-fonts-light_black text-2xl md:mt-5">
+                ENGAGEMENTS
+              </h1>
+              <h1 className="font-mulish-semiBold text-fonts-light_gray text-sm uppercase md:px-6 md:mt-2">
+                A photoshoot is a wonderful way to remember the lovely time that
+                you both had during your engagement And Bringing joy and love to
+                life one frame at a time
+              </h1>
+              <Link
+                href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] font-mulish-extraBold text-fonts-dark_gray">
+                  VIEW PACKAGE DETAILS
+                </button>
+              </Link>
+            </div>
+            <div className=" bg-white rounded-xl shadow-md mx-1 flex flex-col md:mt-10  mt-5 text-center items-center md:mx-5 ">
+              <img
+                className="w-full rounded-t-xl"
+                src="assests/casualShoots.png"
+                alt="My Image"
+              />
+              <h1 className="font-mulish-extraBold text-fonts-light_black text-2xl  md:mt-5">
+                CASUAL SHOOTS
+              </h1>
+              <h1 className="font-mulish-semiBold text-fonts-light_gray text-sm uppercase md:px-6 md:mt-2">
+                A excellent method to get over your worry and nervousness about
+                being in front of the camera on your wedding day is to do casual
+                shoots celebration
+              </h1>
+              <Link
+                href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] font-mulish-extraBold text-fonts-dark_gray">
+                  VIEW PACKAGE DETAILS
+                </button>
+              </Link>
+            </div> */}
           </div>
-          <div className=" bg-white rounded-xl shadow-md mx-1 flex flex-col md:mt-10  mt-5 text-center items-center md:mx-5 ">
-            <img
-              className="w-full rounded-t-xl"
-              src="assests/casualShoots.png"
-              alt="My Image"
-            />
-            <h1 className="font-mulish-extraBold text-fonts-light_black text-2xl  md:mt-5">
-              CASUAL SHOOTS
-            </h1>
-            <h1 className="font-mulish-semiBold text-fonts-light_gray text-sm uppercase md:px-6 md:mt-2">
-              A excellent method to get over your worry and nervousness about
-              being in front of the camera on your wedding day is to do casual
-              shoots celebration
-            </h1>
-            <Link href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link">
-              <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] font-mulish-extraBold text-fonts-dark_gray">
-                VIEW PACKAGE DETAILS
-              </button>
-            </Link>
-          </div>
-        </div>
-        <h1 className="font-mulish-black text-fonts-light_black text-4xl text-center md:mt-14">
-          OUR AMAZING WORK
-        </h1>
-        <h1 className="md:mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-sm text-center uppercase">
-          We aim to capture the essence of your relationship, including the way
-          your faces and hands join together. We want to capture the joyous
-          moments, the heartfelt laughs, and everything in between
-        </h1>
-        <div className="md:grid md:grid-cols-2 md:mt-8">
-          <div className="md:grid md:grid-cols-2 ">
-            <div className="md:grid md:grid-row-3">
-              <div className="md:grid md:grid-row-2 md:pl-3">
+          <h1 className="font-mulish-black text-fonts-light_black md:text-4xl text-xl text-center md:mt-14 mt-9">
+            OUR AMAZING WORK
+          </h1>
+          <h1 className="md:mt-4 mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
+            We aim to capture the essence of your relationship, including the
+            way your faces and hands join together. We want to capture the
+            joyous moments, the heartfelt laughs, and everything in between
+          </h1>
+          <div className="md:grid md:grid-cols-2 md:mt-8 hidden">
+            <div className="md:grid md:grid-cols-2 ">
+              <div className="md:grid md:grid-row-3">
+                <div className="md:grid md:grid-row-2 md:pl-3">
+                  <img
+                    className="bg-blend-screen block lg:w-full"
+                    src="assests/ourWorks/im1.png"
+                    alt="My Image"
+                  />
+                </div>
+
+                <img
+                  className="bg-blend-screen block md:pl-3 lg:w-full md:h-full"
+                  src="assests/ourWorks/im2.png"
+                  alt="My Image"
+                />
+              </div>
+              <div className="md:grid md:grid-row-3 md:pl-3 ">
                 <img
                   className="bg-blend-screen block lg:w-full"
-                  src="assests/ourWorks/im1.png"
+                  src="assests/ourWorks/im3.png"
+                  alt="My Image"
+                />
+                <img
+                  className="bg-blend-screen block md:mt-5 lg:w-full"
+                  src="assests/ourWorks/im4.png"
+                  alt="My Image"
+                />
+
+                <img
+                  className="bg-blend-screen block md:mt-5 lg:w-full "
+                  src="assests/ourWorks/im5.png"
                   alt="My Image"
                 />
               </div>
-
-              <img
-                className="bg-blend-screen block md:pl-3 lg:w-full md:h-full"
-                src="assests/ourWorks/im2.png"
-                alt="My Image"
-              />
             </div>
-            <div className="md:grid md:grid-row-3 md:pl-3 ">
+            <div className="md:grid md:grid-cols-2">
+              <div className="md:grid md:grid-row-3 ">
+                <img
+                  className="bg-blend-screen block md:pl-3 lg:w-full "
+                  src="assests/ourWorks/im6.png"
+                  alt="My Image"
+                />
+                <div className="md:grid md:grid-row-2 md:pl-3">
+                  <img
+                    className="bg-blend-screen block lg:w-full md:h-full"
+                    src="assests/ourWorks/im7.png"
+                    alt="My Image"
+                  />
+                </div>
+              </div>
               <img
-                className="bg-blend-screen block lg:w-full"
-                src="assests/ourWorks/im3.png"
-                alt="My Image"
-              />
-              <img
-                className="bg-blend-screen block md:mt-5 lg:w-full"
-                src="assests/ourWorks/im4.png"
-                alt="My Image"
-              />
-
-              <img
-                className="bg-blend-screen block md:mt-5 lg:w-full "
-                src="assests/ourWorks/im5.png"
+                className="bg-blend-screen block md:pl-3 h-full lg:w-full"
+                src="assests/ourWorks/im8.png"
                 alt="My Image"
               />
             </div>
           </div>
-          <div className="md:grid md:grid-cols-2">
-            <div className="md:grid md:grid-row-3 ">
-              <img
-                className="bg-blend-screen block md:pl-3 lg:w-full "
-                src="assests/ourWorks/im6.png"
-                alt="My Image"
-              />
-              <div className="md:grid md:grid-row-2 md:pl-3">
-                <img
-                  className="bg-blend-screen block lg:w-full md:h-full"
-                  src="assests/ourWorks/im7.png"
-                  alt="My Image"
-                />
-              </div>
-            </div>
+          <div className="block md:hidden mt-5">
             <img
-              className="bg-blend-screen block md:pl-3 h-full lg:w-full"
-              src="assests/ourWorks/im8.png"
+              className="bg-blend-screen block h-full"
+              src="assests/amazing.png"
               alt="My Image"
             />
           </div>
         </div>
       </div>
-      <div className="bg-blend-screen block w-full relative md:mt-10">
-        <img className=" " src="assests/contactUsImage.png" alt="My Image" />
-        <h1 className="text-4xl absolute top-0 left-3 p-4 font-mulish-black text-white">
+      <div className="hidden md:block bg-blend-screen w-full relative md:mt-10 mt-9">
+        <img
+          className="w-full"
+          src="assests/contactUsImage.png"
+          alt="My Image"
+        />
+        <h1 className="md:text-4xl 2xl:text-[38px] text-xl absolute top-0 md:left-3 md:p-4 font-mulish-black text-white 2xl:mt-7 md:mt-3 2xl:ml-5 ">
           CONTACT US
         </h1>
-        <div className="md:w-[450px] bg-white rounded-lg shadow-md p-2 mx-1 flex flex-col md:mt-20 md:ml-6 mt-10 absolute top-0 left-0 md:p-6   ">
-          <h1 className="font-mulish-black text-black text-sm">LOCATION</h1>
-          <h1 className="font-mulish-semiBold text-black text-sm uppercase">
+        <div className="md:w-[450px] 2xl:w-[800px] 2xl:h-[500px] bg-white rounded-3xl shadow-md mx-1 flex flex-col 2xl:mt-40 md:mt-24  2xl:ml-12 md:ml-6 mt-10 ml-4 absolute top-0 left-0 md:p-6 2xl:p-12 p-2">
+          <h1 className="font-mulish-black text-black md:md:text-sm 2xl:text-xl text-xs">
+            LOCATION
+          </h1>
+          <h1 className="font-mulish-semiBold text-black md:text-sm 2xl:text-xl text-[10px] uppercase 2xl:mt-2 mt-[2px]">
             759, the Pulse Weddings StuDio
           </h1>
-          <h1 className="font-mulish-semiBold text-black text-sm uppercase">
+          <h1 className="font-mulish-semiBold text-black md:text-sm 2xl:text-xl text-[10px] uppercase">
             Colombo Rd, Ratnapura, Sri Lanka
           </h1>
-          <h1 className="font-mulish-black text-black text-sm md:mt-5 ">
+          <h1 className="font-mulish-black text-black md:text-sm 2xl:text-xl text-xs md:mt-5 2xl:mt-10 mt-2">
             PHONE
           </h1>
-          <h1 className="font-mulish-semiBold text-black text-sm uppercase">
+          <h1 className="font-mulish-semiBold text-black md:text-sm 2xl:text-xl text-[10px] uppercase 2xl:mt-2 mt-[2px]">
             (+94) 71 113 9749 - Chamitha Herath
           </h1>
-          <h1 className="font-mulish-black text-black text-sm md:mt-5">
+          <h1 className="font-mulish-black text-black md:text-sm 2xl:text-xl text-xs md:mt-5 2xl:mt-10 mt-2">
             E-MAIL
           </h1>
-          <h1 className="font-mulish-semiBold text-black text-sm uppercase">
+          <h1 className="font-mulish-semiBold text-black md:text-sm 2xl:text-xl text-[10px] uppercase 2xl:mt-2 mt-[2px]">
             info@thepulseweddings.com
           </h1>
-          <h1 className="font-mulish-black text-black text-sm md:mt-5">
+          <h1 className="font-mulish-black text-black md:text-sm 2xl:text-xl text-xs md:mt-5 2xl:mt-10 mt-2">
             FOLLOW US ON
           </h1>
 
-          <div className="relative md:mt-2">
+          <div className="relative md:mt-2 2xl:mt-2 mt-[2px]">
             <div className="flex flex-col   ">
               <div className="flex w-full">
-                <Link href="https://www.facebook.com/ThePulse19/">
+                <Link
+                  href="https://www.facebook.com/ThePulse19/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="/assests/socialmedia/facebook.png"
-                    className="md:w-[18px] md:h-[18px] w-[17px] h-[17px] mr-2 cursor-pointer"
+                    className="md:w-5 md:h-5 2xl:w-7 2xl:h-7 w-3 h-3 mr-2 cursor-pointer"
                   />
                 </Link>
-                <Link href="https://www.facebook.com/your-facebook-page">
+                <Link
+                  href="https://www.facebook.com/your-facebook-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="/assests/socialmedia/twitter.png"
-                    className="md:w-[18px] md:h-[18px] w-[17px] h-[17px] mr-2 cursor-pointer"
+                    className="md:w-5 md:h-5 2xl:w-7 2xl:h-7 w-3 h-3 mr-2 cursor-pointer"
                   />
                 </Link>
-                <Link href="https://www.facebook.com/your-facebook-page">
+                <Link
+                  href="https://www.facebook.com/your-facebook-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="/assests/socialmedia/linkedin.png"
-                    className="md:w-[18px] md:h-[18px] w-[17px] h-[17px] mr-2 cursor-pointer"
+                    className="md:w-5 md:h-5 2xl:w-7 2xl:h-7 w-3 h-3 mr-2 cursor-pointer"
                   />
                 </Link>
-                <Link href="https://www.facebook.com/your-facebook-page">
+                <Link
+                  href="https://www.facebook.com/your-facebook-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="/assests/socialmedia/tiktok.png"
-                    className="md:w-[18px] md:h-[18px] w-[17px] h-[17px] mr-2 cursor-pointer"
+                    className="md:w-5 md:h-5 2xl:w-7 2xl:h-7 w-3 h-3 mr-2 cursor-pointer"
                   />
                 </Link>
-                <Link href="https://instagram.com/the.pulseweddings">
+                <Link
+                  href="https://instagram.com/the.pulseweddings"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     src="/assests/socialmedia/instagram.png"
-                    className="md:w-[18px] md:h-[18px] w-[17px] h-[17px] mr-2 cursor-pointer"
+                    className="md:w-5 md:h-5 2xl:w-7 2xl:h-7 w-3 h-3 mr-2 cursor-pointer"
                   />
                 </Link>
               </div>
@@ -297,14 +469,114 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="md:grid md:grid-cols-2">
-        <h1 className="font-mulish-bold text-black md:text-sm md:ml-4 md:mt-4 md:mb-3">
+      <div className="flex md:hidden bg-blend-screen w-full relative mt-9 justify-center ">
+        <img
+          className="h-[270px]"
+          src="assests/contactUsImage.png"
+          alt="My Image"
+        />
+        <h1 className="text-xl absolute top-1 left-3 font-mulish-black text-white">
+          CONTACT US
+        </h1>
+        <div className=" bg-white rounded-3xl shadow-md flex flex-col mt-10 absolute top-0 left-3 p-4 w-[250px]">
+          <h1 className="font-mulish-black text-black md:md:text-sm 2xl:text-xl text-xs">
+            LOCATION
+          </h1>
+          <h1 className="font-mulish-semiBold text-black md:text-sm 2xl:text-xl text-[10px] uppercase 2xl:mt-2 mt-[2px]">
+            759, the Pulse Weddings StuDio
+          </h1>
+          <h1 className="font-mulish-semiBold text-black md:text-sm 2xl:text-xl text-[10px] uppercase">
+            Colombo Rd, Ratnapura, Sri Lanka
+          </h1>
+          <h1 className="font-mulish-black text-black md:text-sm 2xl:text-xl text-xs md:mt-5 2xl:mt-10 mt-2">
+            PHONE
+          </h1>
+          <h1 className="font-mulish-semiBold text-black md:text-sm 2xl:text-xl text-[10px] uppercase 2xl:mt-2 mt-[2px]">
+            (+94) 71 113 9749 - Chamitha Herath
+          </h1>
+          <h1 className="font-mulish-black text-black md:text-sm 2xl:text-xl text-xs md:mt-5 2xl:mt-10 mt-2">
+            E-MAIL
+          </h1>
+          <h1 className="font-mulish-semiBold text-black md:text-sm 2xl:text-xl text-[10px] uppercase 2xl:mt-2 mt-[2px]">
+            info@thepulseweddings.com
+          </h1>
+          <h1 className="font-mulish-black text-black md:text-sm 2xl:text-xl text-xs md:mt-5 2xl:mt-10 mt-2">
+            FOLLOW US ON
+          </h1>
+
+          <div className="relative md:mt-2 2xl:mt-2 mt-[2px]">
+            <div className="flex flex-col   ">
+              <div className="flex w-full">
+                <Link
+                  href="https://www.facebook.com/ThePulse19/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assests/socialmedia/facebook.png"
+                    className="md:w-5 md:h-5 2xl:w-7 2xl:h-7 w-3 h-3 mr-2 cursor-pointer"
+                  />
+                </Link>
+                <Link
+                  href="https://www.facebook.com/your-facebook-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assests/socialmedia/twitter.png"
+                    className="md:w-5 md:h-5 2xl:w-7 2xl:h-7 w-3 h-3 mr-2 cursor-pointer"
+                  />
+                </Link>
+                <Link
+                  href="https://www.facebook.com/your-facebook-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assests/socialmedia/linkedin.png"
+                    className="md:w-5 md:h-5 2xl:w-7 2xl:h-7 w-3 h-3 mr-2 cursor-pointer"
+                  />
+                </Link>
+                <Link
+                  href="https://www.facebook.com/your-facebook-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assests/socialmedia/tiktok.png"
+                    className="md:w-5 md:h-5 2xl:w-7 2xl:h-7 w-3 h-3 mr-2 cursor-pointer"
+                  />
+                </Link>
+                <Link
+                  href="https://instagram.com/the.pulseweddings"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assests/socialmedia/instagram.png"
+                    className="md:w-5 md:h-5 2xl:w-7 2xl:h-7 w-3 h-3 mr-2 cursor-pointer"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="md:grid md:grid-cols-2 sm:flex sm:flex-row sm:justify-center text-center">
+        <h1 className="font-mulish-bold text-black md:text-sm text-[10px] md:ml-4 md:mt-4 md:mb-3 md:text-left sm:text-center">
           © 2024 The Pulse Weddings. All Rights Reserved.
         </h1>
-        <h1 className="font-mulish-bold text-black md:text-sm md:mr-4 md:mt-4 md:mb-3 text-right">
+
+        <h1 className="font-mulish-bold text-black md:text-sm text-[10px] md:mr-4 md:mt-4 md:mb-3 md:text-right sm:text-center">
           Made by{" "}
           <span className="text-fonts-light_green_1 cursor-pointer">
-            <Link href="https://torenshal.com/">Torenshal</Link>
+            <Link
+              href="https://torenshal.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Torenshal
+            </Link>
           </span>
         </h1>
       </div>
