@@ -22,35 +22,93 @@ export default function Home() {
       }
     };
 
+    const handleClickOutside = (event: MouseEvent) => {
+      const nav = navRef.current;
+
+      if (nav && !nav.contains(event.target as Node)) {
+        // Clicked outside the menu, so close it
+        setIsOpen(false);
+      }
+    };
+
+    const handleDocumentClick = (event: MouseEvent) => {
+      // Check if the clicked element is not within the menu or toggle button
+      const nav = navRef.current;
+      const toggleButton = document.getElementById("toggleButton");
+
+      if (
+        nav &&
+        !nav.contains(event.target as Node) &&
+        toggleButton !== event.target
+      ) {
+        // Clicked outside the menu and toggle button, so close it
+        setIsOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("click", handleClickOutside);
+    document.addEventListener("click", handleDocumentClick);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
+
+  const handleNavLinkClick = (id: string) => {
+    const targetElement = document.getElementById(id);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Close the mobile menu when a link is clicked
+    setIsOpen(false);
+  };
 
   return (
     <main>
       <nav ref={navRef} className="top-0 w-full bg-black shadow-md ">
         <div className="hidden md:block">
           <div className="flex justify-between 2xl:px-25 md:px-14 px-4 2xl:py-3 md:py-2 py-2">
-            <div className="2xl:h-[50px] 2xl:w-[200px] md:h-[40px] md:w-[150px] ">
-              <img src="assests/logo.png" alt="My Image" />
+            <div className="2xl:h-[50px] 2xl:w-[200px] md:h-[40px] md:w-[150px] cursor-pointer ">
+              <img
+                src="assests/logo.png"
+                alt="My Image"
+                onClick={() => handleNavLinkClick("home-section")}
+              />
             </div>
             <div className="w-full flex items-center justify-end gap-x-10">
-              <h1 className="font-mulish-extraBold text-background_custom-button_white cursor-pointer md:text-sm 2xl:text-xl text-[6px]">
+              <h1
+                onClick={() => handleNavLinkClick("home-section")}
+                className="font-mulish-extraBold text-background_custom-button_white cursor-pointer md:text-sm 2xl:text-xl text-[6px]"
+              >
                 HOME
               </h1>
-              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]">
+              <h1
+                onClick={() => handleNavLinkClick("about-section")}
+                className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]"
+              >
                 ABOUT US
               </h1>
-              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]">
+              <h1
+                onClick={() => handleNavLinkClick("service-section")}
+                className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]"
+              >
                 SERVICES
               </h1>
-              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]">
+              <h1
+                onClick={() => handleNavLinkClick("work-section")}
+                className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]"
+              >
                 OUR WORK
               </h1>
-              <h1 className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]">
+              <h1
+                onClick={() => handleNavLinkClick("contact-section")}
+                className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer md:text-sm 2xl:text-xl text-[6px]"
+              >
                 CONTACT
               </h1>
             </div>
@@ -70,9 +128,57 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div>
+          <div
+            className={`transition-opacity duration-300 ${
+              isOpen ? "opacity-100" : "opacity-0 hidden"
+            }`}
+          >
+            <div
+              id="out_slider"
+              className="w-screen h-screen inset-0 bg-[#545454B3] fixed"
+            >
+              <div
+                id="inner_slider"
+                className="w-60 top-0 right-0 h-screen fixed bg-global-white p-8"
+              >
+                <h1
+                  onClick={() => handleNavLinkClick("home-section")}
+                  className="font-mulish-extraBold text-fonts-light_gray_2  cursor-pointer text-xs "
+                >
+                  HOME
+                </h1>
+                <h1
+                  onClick={() => handleNavLinkClick("about-section")}
+                  className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
+                >
+                  ABOUT US
+                </h1>
+                <h1
+                  onClick={() => handleNavLinkClick("service-section")}
+                  className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
+                >
+                  SERVICES
+                </h1>
+                <h1
+                  onClick={() => handleNavLinkClick("work-section")}
+                  className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
+                >
+                  OUR WORK
+                </h1>
+                <h1
+                  onClick={() => handleNavLinkClick("contact-section")}
+                  className="font-mulish-extraBold text-fonts-light_gray_2 cursor-pointer text-xs mt-5"
+                >
+                  CONTACT
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
       <div className="md:px-14 md:mt-4 2xl:mt-8 mt-2">
-        <div className="hidden md:block">
+        <div id="home-section" className="hidden md:block">
           <div className=" md:grid md:grid-cols-2 ">
             <div className="flex flex-col justify-center items-center md:items-start md:pl-4">
               <img
@@ -99,7 +205,7 @@ export default function Home() {
         <div className="block md:hidden w-full">
           <div className="flex flex-col justify-center items-center md:items-start">
             <img
-              className="bg-blend-screen block 2xl:w-full 2xl:h-full md:h-full"
+              className="bg-blend-screen block h-full"
               src="assests/homeImage2.png"
               alt="My Image"
             />
@@ -125,7 +231,10 @@ export default function Home() {
             experience with an amazing crew. Capturing the perfect poise or
             smile can only be done by having a smile
           </h1>
-          <div className="md:grid md:grid-cols-3 2xl:grid-cols-3 md:mt-11 2xl:mt-20 mt-6">
+          <div
+            id="about-section"
+            className="md:grid md:grid-cols-3 2xl:grid-cols-3 md:mt-11 2xl:mt-20 mt-6"
+          >
             <img
               className="bg-blend-screen block md:pl-4 md:col-span-1 2xl:col-span-1 2xl:ml-6 sm:px-2 px-12"
               src="assests/aboutUsImage.png"
@@ -167,18 +276,19 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <h1 className="font-mulish-black text-fonts-light_black md:text-4xl 2xl:text-5xl text-xl text-center md:mt-14 2xl:mt-20 mt-[22px] ">
-            WHAT WE OFFER
-          </h1>
-          <h1 className="md:mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px] mt-4">
-            With 5 years of experience in capturing celebrations all around the
-            island,{" "}
-          </h1>
-          <h1 className="font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
-            our team is here to make sure you have the best day of your life
-            filled with photos to reflect that
-          </h1>
-
+          <div id="service-section">
+            <h1 className="font-mulish-black text-fonts-light_black md:text-4xl 2xl:text-5xl text-xl text-center md:mt-14 2xl:mt-20 mt-[22px] ">
+              WHAT WE OFFER
+            </h1>
+            <h1 className="md:mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px] mt-4">
+              With 5 years of experience in capturing celebrations all around
+              the island,{" "}
+            </h1>
+            <h1 className="font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
+              our team is here to make sure you have the best day of your life
+              filled with photos to reflect that
+            </h1>
+          </div>
           <div className="md:grid md:grid-cols-3">
             <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
               <img
@@ -301,82 +411,87 @@ export default function Home() {
               </Link>
             </div> */}
           </div>
-          <h1 className="font-mulish-black text-fonts-light_black md:text-4xl text-xl text-center md:mt-14 mt-9">
-            OUR AMAZING WORK
-          </h1>
-          <h1 className="md:mt-4 mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
-            We aim to capture the essence of your relationship, including the
-            way your faces and hands join together. We want to capture the
-            joyous moments, the heartfelt laughs, and everything in between
-          </h1>
-          <div className="md:grid md:grid-cols-2 md:mt-8 hidden">
-            <div className="md:grid md:grid-cols-2 ">
-              <div className="md:grid md:grid-row-3">
-                <div className="md:grid md:grid-row-2 md:pl-3">
+          <div id="work-section">
+            <h1 className="font-mulish-black text-fonts-light_black md:text-4xl text-xl text-center md:mt-14 mt-9">
+              OUR AMAZING WORK
+            </h1>
+            <h1 className="md:mt-4 mt-4 font-mulish-boldItalic text-fonts-light_gray_2 text-center uppercase md:text-sm 2xl:text-lg text-[7px]">
+              We aim to capture the essence of your relationship, including the
+              way your faces and hands join together. We want to capture the
+              joyous moments, the heartfelt laughs, and everything in between
+            </h1>
+            <div className="md:grid md:grid-cols-2 md:mt-8 hidden">
+              <div className="md:grid md:grid-cols-2 ">
+                <div className="md:grid md:grid-row-3">
+                  <div className="md:grid md:grid-row-2 md:pl-3">
+                    <img
+                      className="bg-blend-screen block lg:w-full"
+                      src="assests/ourWorks/im1.png"
+                      alt="My Image"
+                    />
+                  </div>
+
                   <img
-                    className="bg-blend-screen block lg:w-full"
-                    src="assests/ourWorks/im1.png"
+                    className="bg-blend-screen block md:pl-3 lg:w-full md:h-full"
+                    src="assests/ourWorks/im2.png"
                     alt="My Image"
                   />
                 </div>
+                <div className="md:grid md:grid-row-3 md:pl-3 ">
+                  <img
+                    className="bg-blend-screen block lg:w-full"
+                    src="assests/ourWorks/im3.png"
+                    alt="My Image"
+                  />
+                  <img
+                    className="bg-blend-screen block md:mt-5 lg:w-full"
+                    src="assests/ourWorks/im4.png"
+                    alt="My Image"
+                  />
 
-                <img
-                  className="bg-blend-screen block md:pl-3 lg:w-full md:h-full"
-                  src="assests/ourWorks/im2.png"
-                  alt="My Image"
-                />
+                  <img
+                    className="bg-blend-screen block md:mt-5 lg:w-full "
+                    src="assests/ourWorks/im5.png"
+                    alt="My Image"
+                  />
+                </div>
               </div>
-              <div className="md:grid md:grid-row-3 md:pl-3 ">
+              <div className="md:grid md:grid-cols-2">
+                <div className="md:grid md:grid-row-3 ">
+                  <img
+                    className="bg-blend-screen block md:pl-3 lg:w-full "
+                    src="assests/ourWorks/im6.png"
+                    alt="My Image"
+                  />
+                  <div className="md:grid md:grid-row-2 md:pl-3">
+                    <img
+                      className="bg-blend-screen block lg:w-full md:h-full"
+                      src="assests/ourWorks/im7.png"
+                      alt="My Image"
+                    />
+                  </div>
+                </div>
                 <img
-                  className="bg-blend-screen block lg:w-full"
-                  src="assests/ourWorks/im3.png"
-                  alt="My Image"
-                />
-                <img
-                  className="bg-blend-screen block md:mt-5 lg:w-full"
-                  src="assests/ourWorks/im4.png"
-                  alt="My Image"
-                />
-
-                <img
-                  className="bg-blend-screen block md:mt-5 lg:w-full "
-                  src="assests/ourWorks/im5.png"
+                  className="bg-blend-screen block md:pl-3 h-full lg:w-full"
+                  src="assests/ourWorks/im8.png"
                   alt="My Image"
                 />
               </div>
             </div>
-            <div className="md:grid md:grid-cols-2">
-              <div className="md:grid md:grid-row-3 ">
-                <img
-                  className="bg-blend-screen block md:pl-3 lg:w-full "
-                  src="assests/ourWorks/im6.png"
-                  alt="My Image"
-                />
-                <div className="md:grid md:grid-row-2 md:pl-3">
-                  <img
-                    className="bg-blend-screen block lg:w-full md:h-full"
-                    src="assests/ourWorks/im7.png"
-                    alt="My Image"
-                  />
-                </div>
-              </div>
+            <div className="block md:hidden mt-5">
               <img
-                className="bg-blend-screen block md:pl-3 h-full lg:w-full"
-                src="assests/ourWorks/im8.png"
+                className="bg-blend-screen block h-full"
+                src="assests/amazing.png"
                 alt="My Image"
               />
             </div>
           </div>
-          <div className="block md:hidden mt-5">
-            <img
-              className="bg-blend-screen block h-full"
-              src="assests/amazing.png"
-              alt="My Image"
-            />
-          </div>
         </div>
       </div>
-      <div className="hidden md:block bg-blend-screen w-full relative md:mt-10 mt-9">
+      <div
+        id="contact-section"
+        className="hidden md:block bg-blend-screen w-full relative md:mt-10 mt-9"
+      >
         <img
           className="w-full"
           src="assests/contactUsImage.png"
@@ -472,7 +587,7 @@ export default function Home() {
       <div className="flex md:hidden bg-blend-screen w-full relative mt-9 justify-center ">
         <img
           className="h-[270px]"
-          src="assests/contactUsImage.png"
+          src="assests/contactUsMobile.jpg"
           alt="My Image"
         />
         <h1 className="text-xl absolute top-1 left-3 font-mulish-black text-white">
