@@ -205,15 +205,14 @@ export default function Home() {
                 alt="My Image"
               />
             </div>
-            <div className="md:grid md:grid-flow-row-2 md:px-4">
+            <div className="md:grid md:grid-row-2 md:px-4">
               <img
-                className="bg-blend-screen block 2xl:w-full 2xl:h-full md:h-full"
+                className="2xl:w-full 2xl:h-full "
                 src="assests/homeImage2.png"
                 alt="My Image"
               />
-
               <img
-                className="bg-blend-screen block 2xl:w-full 2xl:h-full md:h-full "
+                className="2xl:w-full 2xl:h-full "
                 src="assests/homeImage3.png"
                 alt="My Image"
               />
@@ -223,23 +222,25 @@ export default function Home() {
         <div className="block md:hidden w-full">
           <div className="flex flex-col justify-center items-center md:items-start">
             <img
-              className="bg-blend-screen block h-full"
+              className="bg-blend-screen block "
               src="assests/homeImage2.png"
               alt="My Image"
             />
           </div>
-          <div className=" grid grid-cols-2 ">
+          <div className=" grid grid-cols-2 justify-end">
             <img
-              className="2xl:w-full 2xl:h-full h-full pr-1"
+              className="2xl:w-full 2xl:h-full  pr-1"
               src="assests/homeImage1.png"
               alt="My Image"
             />
 
-            <img
-              className="2xl:w-full 2xl:h-full h-full pl-1"
-              src="assests/homeImage4.png"
-              alt="My Image"
-            />
+            <div className=" flex justify-end">
+              <img
+                className="2xl:w-full 2xl:h-full pl-1 "
+                src="assests/homeImage4.png"
+                alt="My Image"
+              />
+            </div>
           </div>
         </div>
         <div className="px-5">
@@ -321,7 +322,7 @@ export default function Home() {
           <div className="md:grid md:grid-cols-3">
             <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
               <img
-                className="w-full rounded-t-xl"
+                className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
                 src="assests/weddings.png"
                 alt="My Image"
               />
@@ -345,7 +346,7 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
               <img
-                className="w-full rounded-t-xl"
+                className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
                 src="assests/engagements.png"
                 alt="My Image"
               />
@@ -369,7 +370,7 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
               <img
-                className="w-full rounded-t-xl"
+                className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
                 src="assests/casualShoots.png"
                 alt="My Image"
               />
@@ -510,7 +511,7 @@ export default function Home() {
           </div>
           <div className="block md:hidden mt-5">
             <img
-              className="bg-blend-screen block h-full"
+              className="bg-blend-screen block "
               src="assests/amazing.png"
               alt="My Image"
             />
