@@ -497,7 +497,7 @@ export default function Home() {
           </div>
           <div className="block md:hidden mt-5">
             <img
-              className="bg-blend-screen block h-full"
+              className="bg-blend-screen block "
               src="assests/amazing.png"
               alt="My Image"
             />
