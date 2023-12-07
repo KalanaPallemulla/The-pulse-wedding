@@ -310,7 +310,7 @@ export default function Home() {
           <div className="md:grid md:grid-cols-3">
             <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
               <img
-                className="w-full rounded-t-xl"
+                className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
                 src="assests/weddings.png"
                 alt="My Image"
               />
@@ -334,7 +334,7 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
               <img
-                className="w-full rounded-t-xl"
+                className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
                 src="assests/engagements.png"
                 alt="My Image"
               />
@@ -358,7 +358,7 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
               <img
-                className="w-full rounded-t-xl"
+                className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
                 src="assests/casualShoots.png"
                 alt="My Image"
               />
