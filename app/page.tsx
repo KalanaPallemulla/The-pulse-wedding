@@ -227,18 +227,20 @@ export default function Home() {
               alt="My Image"
             />
           </div>
-          <div className=" grid grid-cols-2 ">
+          <div className=" grid grid-cols-2 justify-end">
             <img
               className="2xl:w-full 2xl:h-full  pr-1"
               src="assests/homeImage1.png"
               alt="My Image"
             />
 
-            <img
-              className="2xl:w-full 2xl:h-full pl-1"
-              src="assests/homeImage4.png"
-              alt="My Image"
-            />
+            <div className=" flex justify-end">
+              <img
+                className="2xl:w-full 2xl:h-full pl-1 "
+                src="assests/homeImage4.png"
+                alt="My Image"
+              />
+            </div>
           </div>
         </div>
         <div className="px-5">
