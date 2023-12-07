@@ -222,20 +222,20 @@ export default function Home() {
         <div className="block md:hidden w-full">
           <div className="flex flex-col justify-center items-center md:items-start">
             <img
-              className="bg-blend-screen block h-full"
+              className="bg-blend-screen block "
               src="assests/homeImage2.png"
               alt="My Image"
             />
           </div>
           <div className=" grid grid-cols-2 ">
             <img
-              className="2xl:w-full 2xl:h-full h-full pr-1"
+              className="2xl:w-full 2xl:h-full  pr-1"
               src="assests/homeImage1.png"
               alt="My Image"
             />
 
             <img
-              className="2xl:w-full 2xl:h-full h-full pl-1"
+              className="2xl:w-full 2xl:h-full pl-1"
               src="assests/homeImage4.png"
               alt="My Image"
             />
