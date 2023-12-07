@@ -230,13 +230,13 @@ export default function Home() {
           </div>
           <div className=" grid grid-cols-2 ">
             <img
-              className="bg-blend-screen block 2xl:w-full 2xl:h-full h-full pr-1"
+              className="2xl:w-full 2xl:h-full h-full pr-1"
               src="assests/homeImage1.png"
               alt="My Image"
             />
 
             <img
-              className="bg-blend-screen block 2xl:w-full 2xl:h-full h-full pl-1"
+              className="2xl:w-full 2xl:h-full h-full pl-1"
               src="assests/homeImage4.png"
               alt="My Image"
             />
