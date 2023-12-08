@@ -34,17 +34,19 @@ const Services = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] w-[175px] h-[36px] font-mulish-extraBold text-fonts-dark_gray md:text-lg text-[9px] mt-6 mb-4">
+            <button className="bg-background_custom-button_white rounded-full md:mt-10 md:mb-7 py-2 px-3 font-mulish-extraBold text-fonts-dark_gray 2xl:text-lg md:text-base text-[7px] mt-6 mb-4">
               VIEW PACKAGE DETAILS
             </button>
           </Link>
         </div>
         <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
-          <img
-            className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
-            src="assests/engagements.png"
-            alt="My Image"
-          />
+          <div className="w-full">
+            <img
+              className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
+              src="assests/engagements.png"
+              alt="My Image"
+            />
+          </div>
           <h1 className="font-mulish-extraBold text-fonts-light_black md:text-2xl text-base md:mt-5 mt-5 ">
             ENGAGEMENTS
           </h1>
@@ -58,7 +60,7 @@ const Services = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] w-[175px] h-[36px] font-mulish-extraBold text-fonts-dark_gray md:text-lg text-[9px] mt-6 mb-4">
+            <button className="bg-background_custom-button_white rounded-full md:mt-10 md:mb-7 py-2 px-3 font-mulish-extraBold text-fonts-dark_gray 2xl:text-lg md:text-base text-[7px] mt-6 mb-4">
               VIEW PACKAGE DETAILS
             </button>
           </Link>
@@ -82,7 +84,7 @@ const Services = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="bg-background_custom-button_white rounded-2xl md:mt-10 md:mb-7 md:h-[40px] md:w-[250px] w-[175px] h-[36px] font-mulish-extraBold text-fonts-dark_gray md:text-lg text-[9px] mt-6 mb-4">
+            <button className="bg-background_custom-button_white rounded-full md:mt-10 md:mb-7 py-2 px-3 font-mulish-extraBold text-fonts-dark_gray 2xl:text-lg md:text-base text-[7px] mt-6 mb-4">
               VIEW PACKAGE DETAILS
             </button>
           </Link>

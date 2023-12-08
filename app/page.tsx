@@ -24,7 +24,7 @@ export default function Home() {
             <div className="md:grid md:grid-row-2 md:px-4">
               <img
                 className="2xl:w-full 2xl:h-full "
-                src="assests/homeImage2.png"
+                src="assests/homeImage2.jpg"
                 alt="My Image"
               />
               <img
@@ -39,7 +39,7 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center md:items-start">
             <img
               className="bg-blend-screen block "
-              src="assests/homeImage2.png"
+              src="assests/homeImage2.jpg"
               alt="My Image"
             />
           </div>
