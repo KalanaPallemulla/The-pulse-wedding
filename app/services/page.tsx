@@ -2,6 +2,19 @@ import Link from "next/link";
 import React from "react";
 
 const Services = () => {
+  const openGoogleWedding = () => {
+    window.open(
+      "https://drive.google.com/drive/folders/1xeU9IuY1hPxP6WVfrqZnYbeJSWIBRrHg?usp=sharing",
+      "_blank"
+    );
+  };
+  const openGoogleEngagment = () => {
+    window.open(
+      "https://drive.google.com/drive/folders/1xeU9IuY1hPxP6WVfrqZnYbeJSWIBRrHg?usp=sharing",
+      "_blank"
+    );
+  };
+
   return (
     <>
       <h1 className="font-mulish-black text-fonts-light_black md:text-4xl 2xl:text-5xl text-xl text-center md:mt-14 2xl:mt-20 mt-[22px] ">
@@ -20,6 +33,7 @@ const Services = () => {
             className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
             src="assests/weddings.png"
             alt="My Image"
+            onClick={openGoogleWedding}
           />
           <h1 className="font-mulish-extraBold text-fonts-light_black md:text-2xl text-base md:mt-5 mt-5 ">
             WEDDINGS
@@ -45,6 +59,7 @@ const Services = () => {
               className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
               src="assests/engagements.png"
               alt="My Image"
+              onClick={openGoogleEngagment}
             />
           </div>
           <h1 className="font-mulish-extraBold text-fonts-light_black md:text-2xl text-base md:mt-5 mt-5 ">
@@ -70,6 +85,7 @@ const Services = () => {
             className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
             src="assests/casualShoots.png"
             alt="My Image"
+            onClick={openGoogleEngagment}
           />
           <h1 className="font-mulish-extraBold text-fonts-light_black md:text-2xl text-base md:mt-5 mt-5 ">
             CASUAL SHOOTS
