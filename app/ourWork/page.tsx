@@ -16,32 +16,32 @@ const OurWork = () => {
           <div className="md:grid md:grid-row-3">
             <div className="md:grid md:grid-row-2 md:pl-3">
               <img
-                className="bg-blend-screen block lg:w-full"
+                className="bg-blend-screen block lg:w-full transition-transform transform delay-150 hover:scale-105"
                 src="assests/ourWorks/im1.png"
                 alt="My Image"
               />
             </div>
 
             <img
-              className="bg-blend-screen block md:pl-3 lg:w-full md:h-full"
+              className="bg-blend-screen block md:pl-3 lg:w-full md:h-full transition-transform transform delay-150 hover:scale-105"
               src="assests/ourWorks/im2.png"
               alt="My Image"
             />
           </div>
           <div className="md:grid md:grid-row-3 md:pl-3 ">
             <img
-              className="bg-blend-screen block lg:w-full"
+              className="bg-blend-screen block lg:w-full transition-transform transform delay-150 hover:scale-105"
               src="assests/ourWorks/im3.png"
               alt="My Image"
             />
             <img
-              className="bg-blend-screen block md:mt-5 lg:w-full"
+              className="bg-blend-screen block md:mt-5 lg:w-full transition-transform transform delay-150 hover:scale-105"
               src="assests/ourWorks/im4.png"
               alt="My Image"
             />
 
             <img
-              className="bg-blend-screen block md:mt-5 lg:w-full "
+              className="bg-blend-screen block md:mt-5 lg:w-full transition-transform transform delay-150 hover:scale-105"
               src="assests/ourWorks/im5.png"
               alt="My Image"
             />
@@ -50,20 +50,20 @@ const OurWork = () => {
         <div className="md:grid md:grid-cols-2">
           <div className="md:grid md:grid-row-3 ">
             <img
-              className="bg-blend-screen block md:pl-3 lg:w-full "
+              className="bg-blend-screen block md:pl-3 lg:w-full transition-transform transform delay-150 hover:scale-105"
               src="assests/ourWorks/im6.png"
               alt="My Image"
             />
             <div className="md:grid md:grid-row-2 md:pl-3">
               <img
-                className="bg-blend-screen block lg:w-full md:h-full"
+                className="bg-blend-screen block lg:w-full md:h-full transition-transform transform delay-150 hover:scale-105"
                 src="assests/ourWorks/im7.png"
                 alt="My Image"
               />
             </div>
           </div>
           <img
-            className="bg-blend-screen block md:pl-3 h-full lg:w-full"
+            className="bg-blend-screen block md:pl-3 h-full lg:w-full transition-transform transform delay-150 hover:scale-105"
             src="assests/ourWorks/im8.png"
             alt="My Image"
           />
