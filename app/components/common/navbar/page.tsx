@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState<Boolean>(false);
-  const [activeLink, setActiveLink] = useState<string | null>(null);
+  const [activeLink, setActiveLink] = useState<string | null>("home");
 
   const toggle = () => setIsOpen(!isOpen);
 
