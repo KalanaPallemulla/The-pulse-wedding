@@ -40,9 +40,9 @@ const Services = () => {
             WEDDINGS
           </h1>
           <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[96px]">
-            EVERY LOVE STORY IS UNIQUE AND SHOULD BE DESCRIBED IN ITS OWN
-            SPECIAL WAY. WE ARE HAPPY TO ADD SOMETHING SPECIAL TO YOUR DAY OF
-            CELEBRATION
+            Every love story is unique and should be described in its own
+            special way. We are happy to add something special to your day of
+            celebration
           </h1>
           <Link
             href="https://drive.google.com/drive/folders/1xeU9IuY1hPxP6WVfrqZnYbeJSWIBRrHg?usp=sharing"
@@ -54,11 +54,10 @@ const Services = () => {
             </button>
           </Link>
         </div>
-
-        <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
-          <div className="w-full ">
+        <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center lg:mx-5 md:mx-2 mx-10">
+          <div className="w-full">
             <img
-              className="w-full relative rounded-t-xl transition-transform transform delay-150 hover:scale-105"
+              className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
               src="assests/engagements.png"
               alt="My Image"
               onClick={openGoogleEngagment}
@@ -68,9 +67,9 @@ const Services = () => {
             ENGAGEMENTS
           </h1>
           <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[96px] ">
-            A PHOTOSHOOT IS A WONDERFUL WAY TO REMEMBER THE LOVELY TIME THAT YOU
-            BOTH HAD DURING YOUR ENGAGEMENT AND BRINGING JOY AND LOVE TO LIFE
-            ONE FRAME AT A TIME
+            A photoshoot is a wonderful way to remember the lovely time that you
+            both had during your engagement And Bringing joy and love to life
+            one frame at a time
           </h1>
           <Link
             href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
@@ -93,9 +92,9 @@ const Services = () => {
             CASUAL SHOOTS
           </h1>
           <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[96px]">
-            AN EXCELLENT METHOD TO GET OVER YOUR WORRY AND NERVOUSNESS ABOUT
-            BEING IN FRONT OF THE CAMERA ON YOUR WEDDING DAY IS TO DO CASUAL
-            SHOOTS CELEBRATION
+            A excellent method to get over your worry and nervousness about
+            being in front of the camera on your wedding day is to do casual
+            shoots celebration
           </h1>
           <Link
             href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
