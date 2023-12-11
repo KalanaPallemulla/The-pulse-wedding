@@ -40,9 +40,9 @@ const Services = () => {
             WEDDINGS
           </h1>
           <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[96px]">
-            Every love story is unique and should be described in its own
-            special way. We are happy to add something special to your day of
-            celebration
+            EVERY LOVE STORY IS UNIQUE AND SHOULD BE DESCRIBED IN ITS OWN
+            SPECIAL WAY. WE ARE HAPPY TO ADD SOMETHING SPECIAL TO YOUR DAY OF
+            CELEBRATION
           </h1>
           <Link
             href="https://drive.google.com/drive/folders/1xeU9IuY1hPxP6WVfrqZnYbeJSWIBRrHg?usp=sharing"
@@ -68,9 +68,9 @@ const Services = () => {
             ENGAGEMENTS
           </h1>
           <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[96px] ">
-            A photoshoot is a wonderful way to remember the lovely time that you
-            both had during your engagement And Bringing joy and love to life
-            one frame at a time
+            A PHOTOSHOOT IS A WONDERFUL WAY TO REMEMBER THE LOVELY TIME THAT YOU
+            BOTH HAD DURING YOUR ENGAGEMENT AND BRINGING JOY AND LOVE TO LIFE
+            ONE FRAME AT A TIME
           </h1>
           <Link
             href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
@@ -93,9 +93,9 @@ const Services = () => {
             CASUAL SHOOTS
           </h1>
           <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[96px]">
-            A excellent method to get over your worry and nervousness about
-            being in front of the camera on your wedding day is to do casual
-            shoots celebration
+            AN EXCELLENT METHOD TO GET OVER YOUR WORRY AND NERVOUSNESS ABOUT
+            BEING IN FRONT OF THE CAMERA ON YOUR WEDDING DAY IS TO DO CASUAL
+            SHOOTS CELEBRATION
           </h1>
           <Link
             href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
