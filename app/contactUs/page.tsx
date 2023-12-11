@@ -4,7 +4,7 @@ import React from "react";
 const ContactUs = () => {
   return (
     <>
-      <div className="hidden md:block bg-blend-screen w-full relative md:mt-10 mt-9">
+      <div className="hidden lg:block bg-blend-screen w-full relative md:mt-10 mt-9">
         <img
           className="w-full"
           src="assests/contactUsImage.png"
@@ -97,16 +97,16 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className="flex md:hidden bg-blend-screen w-full relative mt-9 justify-center ">
+      <div className="flex lg:hidden bg-blend-screen w-full relative mt-9 justify-center ">
         <img
-          className="h-[270px]"
-          src="assests/contactUsMobile.jpg"
+          className="h-[270px] md:h-[360px] md:w-full"
+          src="assests/contactUs1.jpg"
           alt="My Image"
         />
-        <h1 className="text-xl absolute top-1 left-3 font-mulish-black text-white">
+        <h1 className="text-xl absolute top-1 left-3 md:left-6 md:mt-1 font-mulish-black text-white">
           CONTACT US
         </h1>
-        <div className=" bg-white rounded-3xl shadow-md flex flex-col mt-10 absolute top-0 left-3 p-4 w-[250px]">
+        <div className=" bg-white rounded-3xl shadow-md flex flex-col mt-10 md:mt-12 absolute top-0 left-3 md:left-6 p-4 w-[300px] md:w-[450px]">
           <h1 className="font-mulish-black text-black md:md:text-sm 2xl:text-xl text-xs">
             LOCATION
           </h1>
