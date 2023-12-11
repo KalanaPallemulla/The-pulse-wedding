@@ -29,82 +29,86 @@ const Services = () => {
       </h1>
 
       <div className="md:grid md:grid-cols-3">
-        <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10 mt-5 text-center items-center lg:mx-5 md:mx-2 mx-10">
-          <img
-            className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
-            src="assests/weddings.png"
-            alt="My Image"
-            onClick={openGoogleWedding}
-          />
-          <h1 className="font-mulish-extraBold text-fonts-light_black md:text-lg text-base md:mt-5 mt-5 ">
-            WEDDINGS
-          </h1>
-          <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[96px]">
-            Every love story is unique and should be described in its own
-            special way. We are happy to add something special to your day of
-            celebration
-          </h1>
-          <Link
-            href="https://drive.google.com/drive/folders/1xeU9IuY1hPxP6WVfrqZnYbeJSWIBRrHg?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="bg-background_custom-button_white rounded-full md:mt-10 md:mb-7 py-2 px-3 font-mulish-extraBold text-fonts-dark_gray 2xl:text-lg lg:text-base md:text-xs text-[7px] mt-6 mb-4">
-              VIEW PACKAGE DETAILS
-            </button>
-          </Link>
+        <div>
+          <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10 mt-5 text-center items-center lg:mx-5 md:mx-2 mx-10">
+            <img
+              className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
+              src="assests/weddings.png"
+              alt="My Image"
+              onClick={openGoogleWedding}
+            />
+            <h1 className="font-mulish-extraBold text-fonts-light_black md:text-lg text-base md:mt-5 mt-5 ">
+              WEDDINGS
+            </h1>
+            <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[88px] lg:max-h-[80px]">
+              Every love story is unique and should be described in its own
+              special way. We are happy to add something special to your day of
+              celebration
+            </h1>
+            <Link
+              href="https://drive.google.com/drive/folders/1xeU9IuY1hPxP6WVfrqZnYbeJSWIBRrHg?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-background_custom-button_white rounded-full md:mt-10 md:mb-7 py-2 px-3 font-mulish-extraBold text-fonts-dark_gray 2xl:text-lg lg:text-base md:text-xs text-[7px] mt-6 mb-4">
+                VIEW PACKAGE DETAILS
+              </button>
+            </Link>
+          </div>
         </div>
-        <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center lg:mx-5 md:mx-2 mx-10">
-          <div className="w-full">
+        <div>
+          <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10 mt-5 text-center items-center lg:mx-5 md:mx-2 mx-10">
             <img
               className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
               src="assests/engagements.png"
               alt="My Image"
-              onClick={openGoogleEngagment}
+              onClick={openGoogleWedding}
             />
+            <h1 className="font-mulish-extraBold text-fonts-light_black md:text-lg text-base md:mt-5 mt-5 ">
+              ENGAGEMENTS
+            </h1>
+            <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[88px] lg:max-h-[80px]">
+              A photoshoot is a wonderful way to remember the lovely time that
+              you both had during your engagement And Bringing joy and love to
+              life one frame at a time
+            </h1>
+            <Link
+              href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-background_custom-button_white rounded-full md:mt-10 md:mb-7 py-2 px-3 font-mulish-extraBold text-fonts-dark_gray 2xl:text-lg lg:text-base md:text-xs text-[7px] mt-6 mb-4">
+                VIEW PACKAGE DETAILS
+              </button>
+            </Link>
           </div>
-          <h1 className="font-mulish-extraBold text-fonts-light_black md:text-lg text-base md:mt-5 mt-5 ">
-            ENGAGEMENTS
-          </h1>
-          <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[96px] ">
-            A photoshoot is a wonderful way to remember the lovely time that you
-            both had during your engagement And Bringing joy and love to life
-            one frame at a time
-          </h1>
-          <Link
-            href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="bg-background_custom-button_white rounded-full md:mt-10 md:mb-7 py-2 px-3 font-mulish-extraBold text-fonts-dark_gray 2xl:text-lg lg:text-base md:text-xs text-[7px] mt-6 mb-4 bottom-2 right-2">
-              VIEW PACKAGE DETAILS
-            </button>
-          </Link>
         </div>
-        <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center lg:mx-5 md:mx-2 mx-10">
-          <img
-            className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
-            src="assests/casualShoots.png"
-            alt="My Image"
-            onClick={openGoogleEngagment}
-          />
-          <h1 className="font-mulish-extraBold text-fonts-light_black md:text-lg text-base md:mt-5 mt-5 ">
-            CASUAL SHOOTS
-          </h1>
-          <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[96px]">
-            A excellent method to get over your worry and nervousness about
-            being in front of the camera on your wedding day is to do casual
-            shoots celebration
-          </h1>
-          <Link
-            href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="bg-background_custom-button_white rounded-full md:mt-10 md:mb-7 py-2 px-3 font-mulish-extraBold text-fonts-dark_gray 2xl:text-lg lg:text-base md:text-xs text-[7px] mt-6 mb-4">
-              VIEW PACKAGE DETAILS
-            </button>
-          </Link>
+        <div>
+          <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10 mt-5 text-center items-center lg:mx-5 md:mx-2 mx-10">
+            <img
+              className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
+              src="assests/casualShoots.png"
+              alt="My Image"
+              onClick={openGoogleWedding}
+            />
+            <h1 className="font-mulish-extraBold text-fonts-light_black md:text-lg text-base md:mt-5 mt-5 ">
+              CASUAL SHOOTS
+            </h1>
+            <h1 className="font-mulish-semiBold text-fonts-light_gray lg:text-sm md:text-[10px] text-[9px] uppercase md:px-6 px-6 md:mt-2 mt-[6px] md:max-h-[88px] lg:max-h-[80px]">
+              A excellent method to get over your worry and nervousness about
+              being in front of the camera on your wedding day is to do casual
+              shoots celebration
+            </h1>
+            <Link
+              href="https://drive.google.com/file/d/1P305B4NUYTnCvhaT1dssh_43Vpmk__5p/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-background_custom-button_white rounded-full md:mt-10 md:mb-7 py-2 px-3 font-mulish-extraBold text-fonts-dark_gray 2xl:text-lg lg:text-base md:text-xs text-[7px] mt-6 mb-4">
+                VIEW PACKAGE DETAILS
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>
