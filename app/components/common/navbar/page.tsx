@@ -5,7 +5,7 @@ import React, { useEffect, useRef, useState } from "react";
 const Navbar = () => {
   const navRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState<Boolean>(false);
-  const [activeLink, setActiveLink] = useState<string | null>(null);
+  const [activeLink, setActiveLink] = useState<string | null>("home");
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -87,7 +87,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav ref={navRef} className="top-0 w-full bg-black shadow-md ">
+      <nav className="top-0 fixed w-full bg-black shadow-md z-10 ">
         <div className="hidden md:block">
           <div className="flex justify-between 2xl:px-25 md:px-14 px-4 2xl:py-3 md:py-2 py-2">
             <div className="2xl:h-[50px] 2xl:w-[200px] md:h-[40px] md:w-[150px] cursor-pointer ">

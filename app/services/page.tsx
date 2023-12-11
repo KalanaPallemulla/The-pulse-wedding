@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 
@@ -53,10 +54,11 @@ const Services = () => {
             </button>
           </Link>
         </div>
-        <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center lg:mx-5 md:mx-2 mx-10">
-          <div className="w-full">
+
+        <div className="bg-white rounded-2xl shadow-md flex flex-col md:mt-10  mt-5  text-center items-center md:mx-5 mx-10">
+          <div className="w-full ">
             <img
-              className="w-full rounded-t-xl transition-transform transform delay-150 hover:scale-105"
+              className="w-full relative rounded-t-xl transition-transform transform delay-150 hover:scale-105"
               src="assests/engagements.png"
               alt="My Image"
               onClick={openGoogleEngagment}
