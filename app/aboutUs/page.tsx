@@ -2,27 +2,29 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div className="md:grid md:grid-cols-3 2xl:grid-cols-3 md:mt-11 2xl:mt-20 mt-6">
-      <img
-        className="bg-blend-screen block md:pl-4 md:col-span-1 2xl:col-span-1 2xl:ml-6 sm:px-2 px-12"
-        src="assests/aboutUsImage.png"
-        alt="My Image"
-      />
-      <div className="md:col-span-2 2xl:col-span-2 md:mt-0 mt-5 md:ml-4 2xl:ml-0">
-        <div className="hidden md:block">
-          <h1 className="font-mulish-black text-fonts-light_black md:text-4xl 2xl:text-5xl text-xl">
+    <div className="md:grid lg:grid-cols-3 2xl:grid-cols-3 md:mt-11 2xl:mt-20 mt-6">
+      <div className="md:flex md:justify-center">
+        <img
+          className="bg-blend-screen block lg:pl-4 lg:col-span-1 2xl:col-span-1 2xl:ml-6 sm:px-2 px-12"
+          src="assests/aboutUsImage.png"
+          alt="My Image"
+        />
+      </div>
+      <div className="lg:col-span-2 2xl:col-span-2 lg:mt-0 mt-5 md:ml-4 2xl:ml-0">
+        <div className="hidden lg:block">
+          <h1 className="font-mulish-black text-fonts-light_black lg:text-4xl 2xl:text-5xl text-xl">
             THE
           </h1>
           <h1 className="font-mulish-black text-fonts-light_black md:text-4xl 2xl:text-5xl text-xl">
             PULSE WEDDINGS
           </h1>
         </div>
-        <div className="block md:hidden w-full text-center">
-          <h1 className="font-mulish-black text-fonts-light_black text-xl">
+        <div className="block lg:hidden w-full text-center">
+          <h1 className="font-mulish-black text-fonts-light_black text-xl md:text-3xl">
             THE PULSE WEDDINGS
           </h1>
         </div>
-        <h1 className="font-mulish-regular text-fonts-light_gray_2 md:mt-4 text-justify md:text-xs 2xl:text-xl text-xs mt-[6px]">
+        <h1 className="font-mulish-regular text-fonts-light_gray_2 md:mt-2 lg:mt-4 text-justify md:text-xs lg:text-xs 2xl:text-xl text-xs mt-[6px]">
           As a tightly-knit group of passionate photographers, we, at The Pulse
           Weddings, consider ourselves truly fortunate to transform our love for
           photography into a fulfilling career. Our fascination lies in the
