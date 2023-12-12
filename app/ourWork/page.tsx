@@ -51,13 +51,13 @@ const OurWork = () => {
           <div className="md:grid md:grid-row-3 ">
             <img
               className="bg-blend-screen block md:pl-3 lg:w-full transition-transform transform delay-150 hover:scale-105"
-              src="assests/ourWorks/im6.png"
+              src="assests/ourWorks/im6.jpg"
               alt="My Image"
             />
             <div className="md:grid md:grid-row-2 md:pl-3">
               <img
                 className="bg-blend-screen block lg:w-full md:h-full transition-transform transform delay-150 hover:scale-105"
-                src="assests/ourWorks/im7.png"
+                src="assests/ourWorks/im7.jpg"
                 alt="My Image"
               />
             </div>
@@ -72,7 +72,7 @@ const OurWork = () => {
       <div className="block md:hidden mt-5">
         <img
           className="bg-blend-screen block "
-          src="assests/amazing.png"
+          src="assests/ourWorks/amazing.png"
           alt="My Image"
         />
       </div>
