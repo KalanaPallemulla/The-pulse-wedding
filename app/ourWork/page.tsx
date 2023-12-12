@@ -17,14 +17,14 @@ const OurWork = () => {
             <div className="md:grid md:grid-row-2 md:pl-3">
               <img
                 className="bg-blend-screen block lg:w-full transition-transform transform delay-150 hover:scale-105"
-                src="assests/ourWorks/im1.png"
+                src="assests/ourWorks/im1.jpg"
                 alt="My Image"
               />
             </div>
 
             <img
               className="bg-blend-screen block md:pl-3 lg:w-full md:h-full transition-transform transform delay-150 hover:scale-105"
-              src="assests/ourWorks/im2.png"
+              src="assests/ourWorks/im2.jpg"
               alt="My Image"
             />
           </div>
@@ -36,7 +36,7 @@ const OurWork = () => {
             />
             <img
               className="bg-blend-screen block md:mt-5 lg:w-full transition-transform transform delay-150 hover:scale-105"
-              src="assests/ourWorks/im4.png"
+              src="assests/ourWorks/im4.jpg"
               alt="My Image"
             />
 
